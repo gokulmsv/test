@@ -1,0 +1,113 @@
+{
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast) - Professional Exam Prep Variant",
+  "colors": {
+    "light": {
+      "background": "0 0% 100%",
+      "foreground": "215 28% 17%",
+      "card": "0 0% 100%",
+      "card-foreground": "215 28% 17%",
+      "primary": "215 70% 30%",
+      "primary-foreground": "0 0% 100%",
+      "secondary": "215 20% 95%",
+      "secondary-foreground": "215 70% 30%",
+      "accent": "215 20% 95%",
+      "accent-foreground": "215 70% 30%",
+      "destructive": "0 70% 50%",
+      "destructive-foreground": "0 0% 100%",
+      "border": "215 20% 90%",
+      "success": "160 84% 39%",
+      "warning": "38 92% 50%",
+      "neutral-slate": "215 15% 95%",
+      "muted": "215 20% 95%",
+      "muted-foreground": "215 15% 45%"
+    },
+    "dark": {
+      "background": "215 28% 10%",
+      "foreground": "0 0% 98%",
+      "card": "215 28% 12%",
+      "card-foreground": "0 0% 98%",
+      "primary": "215 80% 60%",
+      "primary-foreground": "215 28% 10%",
+      "secondary": "215 20% 18%",
+      "secondary-foreground": "215 80% 60%",
+      "accent": "215 20% 18%",
+      "accent-foreground": "215 80% 60%",
+      "destructive": "0 70% 60%",
+      "destructive-foreground": "0 0% 100%",
+      "border": "215 20% 18%",
+      "success": "160 60% 45%",
+      "warning": "38 92% 50%",
+      "neutral-slate": "215 28% 12%",
+      "muted": "215 20% 18%",
+      "muted-foreground": "215 15% 65%"
+    },
+    "chart_palette": [
+      "hsl(215, 70%, 50%)",
+      "hsl(160, 84%, 39%)",
+      "hsl(38, 92%, 50%)",
+      "hsl(0, 70%, 50%)",
+      "hsl(280, 65%, 60%)"
+    ]
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "IBM Plex Sans",
+    "hierarchy": {
+      "h1": "text-3xl sm:text-4xl tracking-tight font-semibold",
+      "h2": "text-2xl sm:text-3xl tracking-tight font-semibold",
+      "h3": "text-xl sm:text-2xl font-medium",
+      "h4": "text-lg font-medium",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm text-muted-foreground",
+      "overline": "text-xs uppercase tracking-[0.2em] font-semibold"
+    }
+  },
+  "spacing_and_layout": {
+    "global_padding": "p-4 md:p-8",
+    "card_padding": "p-6",
+    "grid_gap": "gap-6",
+    "container_max": "max-w-7xl mx-auto",
+    "border_radius": "rounded-lg"
+  },
+  "components": {
+    "sidebar": "Fixed layout, 240px-280px wide. Use distinct active states using primary text and subtle background. Hide on mobile in favor of a hamburger drawer.",
+    "metric_cards": "Flat background, 1px subtle border. Big number (28px+). Trend indicator.",
+    "buttons": "Rounded-md, bold text. Use primary for major actions (Submit Test). Use outline for secondary actions.",
+    "test_interface": "Dense grid structure. Fixed header for Time Remaining. Right sidebar for Question Palette. Auto-fill grids for test screening. Row height 48-52px for scanning efficiency.",
+    "question_palette": "Grid of small rounded squares (w-8 h-8). Green (Answered), Red (Unanswered/Wrong), Amber (Marked for Review), Gray (Not Visited)."
+  },
+  "libraries_and_tools": {
+    "icons": "lucide-react (default) OR @phosphor-icons/react for dense dashboard needs.",
+    "charts": "recharts (for radar, bar, and weekly performance graph).",
+    "packages_to_install": ["recharts", "lucide-react", "clsx", "tailwind-merge"]
+  },
+  "media": {
+    "images": [
+      {
+        "category": "auth_background",
+        "url": "https://images.unsplash.com/photo-1514369118554-e20d93546b30",
+        "description": "Woman writing on book - for login/signup screen split view"
+      },
+      {
+        "category": "empty_state",
+        "url": "https://images.pexels.com/photos/9159388/pexels-photo-9159388.jpeg",
+        "description": "Focused student for empty states or dashboard welcome banner"
+      },
+      {
+        "category": "study_illustration",
+        "url": "https://images.pexels.com/photos/6550117/pexels-photo-6550117.jpeg",
+        "description": "Young man studying for promotional areas or upgrades"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Ensure dark mode is fully functional using Tailwind class strategy ('dark' on html). Update globals.css with the provided HSL variables.",
+    "In the test taking interface, DO NOT use huge padding. Prioritize data density so students can see long questions and options without scrolling excessively.",
+    "Implement Question Palette correctly: Answered, Not Answered, Not Visited, Marked for Review.",
+    "For the Analytics Dashboard, implement a mock GitHub-style calendar heatmap using small grid cells, and Radar/Bar charts via Recharts.",
+    "Include a 'data-testid' attribute on EVERY interactive element (buttons, tabs, inputs, palette items) to ensure automated testing succeeds.",
+    "AI Explanation chat should feel distinct, perhaps integrated below the explanation or as a sliding right panel.",
+    "Maintain high contrast for readability (APCA/WCAG standards), particularly for the question text and options."
+  ]
+}
